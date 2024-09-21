@@ -42,6 +42,5 @@ export function constructMetaData({
       creator: "@mohammad_sb_2002",
     },
     icons,
-    metadataBase:new URL("")
   };
 }

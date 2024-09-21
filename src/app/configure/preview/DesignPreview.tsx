@@ -19,7 +19,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const { toast } = useToast();
   useEffect(() => {
     setShowConfetti(true);
-  });
+  },[]);
   const { color, model, finish, material } = configuration;
   const tw = COLORS.find(
     (supportedColor) => supportedColor.value === color

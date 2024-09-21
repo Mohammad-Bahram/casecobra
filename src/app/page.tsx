@@ -98,11 +98,11 @@ export default function Home() {
 
           <div className="col-span-4 lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
             <div className="relative md:max-w-xl  ">
-              <img
+              <img alt="test"
                 src="/your-image.png"
                 className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block "
               />
-              <img
+              <img alt="test"
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
               />
