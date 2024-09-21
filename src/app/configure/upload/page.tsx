@@ -1,16 +1,14 @@
 "use client";
 
 import { Progress } from "@/components/ui/progress";
-import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/hooks/use-toast";
 import { useUploadThing } from "@/lib/uploadthing";
 import { cn } from "@/lib/utils";
-import { span } from "framer-motion/client";
 import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
-const page = () => {
+const Page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(45);
 
@@ -43,6 +41,8 @@ const page = () => {
   };
 
   const [isPending, startTransition] = useTransition();
+  console.log(startTransition);
+
   return (
     <div
       className={cn(
@@ -111,4 +111,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -1,11 +1,8 @@
-import React, { use } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { env } from "process";
-
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
 

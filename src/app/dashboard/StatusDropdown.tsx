@@ -16,11 +16,11 @@ const LABEL_MAP: Record<keyof typeof OrderStatus, string> = {
 };
 
 const StatusDropdown = ({
-  id,
   orderStatus,
+  id,
 }: {
-  id: string;
   orderStatus: OrderStatus;
+  id: string;
 }) => {
   return (
     <DropdownMenu>
@@ -36,7 +36,7 @@ const StatusDropdown = ({
       <DropdownMenuContent className="p-0">
         {Object.keys(OrderStatus).map((status) => (
           <DropdownMenuItem
-            key={status}
+            key={id}
             className={cn(
               "flex text-sm gap-1 items-center p-2.5 cursor-default bg-white hover:bg-zinc-100",
               {

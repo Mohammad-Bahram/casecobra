@@ -31,8 +31,6 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { saveConfig as _saveConfig, SaveConfigArgs } from "./actions";
 import { useRouter } from "next/navigation";
-import { CaseFinish, PhoneModel } from "@prisma/client";
-
 interface DesignConfigurator {
   configId: string;
   imageUrl: string;

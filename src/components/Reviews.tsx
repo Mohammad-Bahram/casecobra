@@ -33,7 +33,7 @@ function ReviewColumn({
   reviewClassName,
   msPerPixel = 0,
 }: {
-  reviews: string | any;
+  reviews: string[];
   className?: string;
   reviewClassName?: (reviewIndex: number) => string;
   msPerPixel?: number;
@@ -61,7 +61,7 @@ function ReviewColumn({
       className={cn("animate-marquee space-y-8 py-4 ", className)}
       style={{ "--marquee-duration": duration } as React.CSSProperties}
     >
-      {reviews.concat(reviews).map((imgSrc: any, reviewIndex: any) => (
+      {reviews.concat(reviews).map((imgSrc: string, reviewIndex: number) => (
         <Review
           key={reviewIndex}
           className={reviewClassName?.(reviewIndex % reviews.length)}
@@ -94,7 +94,8 @@ function Review({ imgSrc, className, ...props }: ReviewProps) {
     <div
       {...props}
       className={cn(
-        "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5 "
+        "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5 ",
+        className
       )}
       style={{ animationDelay }}
     >

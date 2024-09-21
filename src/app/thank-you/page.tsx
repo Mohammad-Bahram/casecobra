@@ -1,17 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Thnaks from "./Thanks";
 import { useEffect, useState } from "react";
 import Thanks from "./Thanks";
 
-const page = () => {
+const Page = () => {
   const [num, setNum] = useState(10);
   const router = useRouter();
   useEffect(() => {
     const redirect = setTimeout(() => {
       router.push("/");
     }, 10000);
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setNum(num - 1);
       if (num === 0) {
         setNum(0);
@@ -23,9 +22,8 @@ const page = () => {
   return (
     <>
       <Thanks num={num} />
-      
     </>
   );
 };
 
-export default page;
+export default Page;
