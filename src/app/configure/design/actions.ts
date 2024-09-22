@@ -1,18 +1,13 @@
 "use server";
 
 import { db } from "@/db";
-import {
-  CaseColor,
-  CaseFinish,
-  CaseMaterial,
-  PhoneModel,
-} from "../../../../node_modules/.prisma/client";
+import PrismaClient from "../../../../node_modules/.prisma/client";
 
 export type SaveConfigArgs = {
-  color: CaseColor;
-  finish: CaseFinish;
-  material: CaseMaterial;
-  model: PhoneModel;
+  color: PrismaClient.CaseColor;
+  finish: PrismaClient.CaseFinish;
+  material: PrismaClient.CaseMaterial;
+  model: PrismaClient.PhoneModel;
   configId: string;
 };
 
