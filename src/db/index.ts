@@ -1,5 +1,4 @@
-/* eslint-disable no-var */
-
+//@ts-nocheck
 import { PrismaClient } from "@prisma/client";
 
 declare global {
