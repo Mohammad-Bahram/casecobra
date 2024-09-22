@@ -2,7 +2,7 @@
 import { PrismaClient } from "@prisma/client";
 
 declare global {
-  //@ts-ignore
+  //@ts-expect - error
   var cachedPrisma: PrismaClient;
 }
 
