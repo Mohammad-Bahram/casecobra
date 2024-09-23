@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use server";
 
 import { BASE_PRICE, PRODUCT_PRICES } from "@/config/products";
